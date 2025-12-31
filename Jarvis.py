@@ -8,7 +8,7 @@ import tkinter as tk
 
 engine = pyttsx3.init('sapi5')
 
-client = wolframalpha.Client('JWUPK8-4YRER7PEH6' )#get the wolframalpha app_id
+client = wolframalpha.Client('7XX8W43L5U')#get the wolframalpha app_id
 
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[len(voices)-2].id)#get the computer voices
@@ -32,14 +32,7 @@ def greetMe():
     else:
         speak('Hello sir, Good Evening!')
        
-greetMe()
 
-
-
-
-# my commard to speak
-speak(' I am your Personal Assistant Jarvis !')
-speak('How may I help you?')#your costing
 
 def sofiaResponse(audio):
     "speaks audio passed as argument"
@@ -70,9 +63,14 @@ def myCommand():
 
 if __name__ == '__main__':
 
+    greetMe()
+    # my commard to speak
+    speak(' I am your Personal Assistant Jarvis !')
+    speak('How may I help you?')
+
     while True:
     
-        query = myCommand();
+        query = myCommand()
         query = query.lower()
       #open it moer apps  
         if 'open youtube' in query:
